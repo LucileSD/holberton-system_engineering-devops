@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lA | wc -l
+find . -name -type -not d | wc -1
