@@ -1,2 +1,2 @@
 echo "Hello, World /n"
-\
+cat >> 0-hello_world
