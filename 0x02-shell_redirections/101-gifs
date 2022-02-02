@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lar | find *.gif | cut -d "/" -f1
+ls -lar | find . *.gif | cut -d "/" -f1
