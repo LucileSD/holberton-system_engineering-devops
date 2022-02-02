@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l | find *.gif | rev
+ls -lar | find *.gif
