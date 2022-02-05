@@ -1,0 +1,2 @@
+#!/bin/bash
+head -c1 | cut -d N-2 
