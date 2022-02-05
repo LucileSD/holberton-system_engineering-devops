@@ -1,2 +1,2 @@
 #!/bin/bash
-head -c1 | cut -d N-2 
+cut -c1 | sort 
