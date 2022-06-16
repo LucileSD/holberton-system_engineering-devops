@@ -3,7 +3,6 @@
 c=1
 while ((c <= 10))
 do
-	
 	if ((c != 8))
 	then
 		echo "Best School"
