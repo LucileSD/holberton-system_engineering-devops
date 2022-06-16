@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script is displaying number to 1 to 20 with some sentences at some conditions
+num=1
+while ((num <= 20))
+do
+	if ((num == 4))
+	then
+		echo "bad luck from china"
+	elif ((num == 9))
+	then
+		echo "bad luck from Japan"
+	elif ((num == 17))
+	then
+		echo "bad luck from Italy"
+	else
+		echo $num
+	fi
+	((num++))
+done
