@@ -3,11 +3,12 @@
 c=1
 while ((c <= 10))
 do
-	if ((c != 9))
+	echo "Best School"
+	if ((c == 9))
 	then
-		echo "Best School"
-	else
 		echo "Hi"
 	fi
+	
+
 	((c++))
 done
