@@ -6,7 +6,7 @@ do
 	echo $num
 	if ((num == 4))
 	then
-		echo "bad luck from china"
+		echo "bad luck from China"
 	elif ((num == 9))
 	then
 		echo "bad luck from Japan"
