@@ -3,6 +3,7 @@
 num=1
 while ((num <= 20))
 do
+	echo $num
 	if ((num == 4))
 	then
 		echo "bad luck from china"
@@ -12,8 +13,6 @@ do
 	elif ((num == 17))
 	then
 		echo "bad luck from Italy"
-	else
-		echo $num
 	fi
 	((num++))
 done
