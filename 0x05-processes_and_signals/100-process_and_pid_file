@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# a Bash script that Creates the file /var/run/myscript.pid containing its PID
+echo "$$" > /var/run/myscript.pid
+trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm "/var/run/myscript.pid"; echo "I hate the kill command"; kill -s KILL "$$"' SIGQUIT SIGTERM
+i=1
+while ((i==1))
+do
+	echo "To infinity and beyond"
+done
