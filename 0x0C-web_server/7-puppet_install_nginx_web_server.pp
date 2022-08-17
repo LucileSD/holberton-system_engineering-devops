@@ -18,5 +18,7 @@ file_line { 'redirection':
 
 service { 'nginx':
   ensure  => running,
+  enable     => true,
+  hasrestart => true,
   require => Package['nginx'],
 }
