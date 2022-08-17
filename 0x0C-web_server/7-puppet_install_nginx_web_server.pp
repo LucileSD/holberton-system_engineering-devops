@@ -1,5 +1,9 @@
 #Create Nginx configuration server via puppet
 
+package { 'nginx':
+  ensure =>present,
+}
+
 file { 'html':
   path    => '/var/www/html/index.nginx-debian.html',
   content => 'Hello World\n',
