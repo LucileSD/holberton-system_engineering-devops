@@ -1,7 +1,7 @@
 #Create Nginx configuration server via puppet
 
 package { 'nginx':
-  ensure =>present,
+  ensure => present,
 }
 
 file { 'html':
@@ -17,6 +17,6 @@ file_line { 'redirection':
 }
 
 service { 'nginx':
-  ensure  =>'running',
+  ensure  => running,
   require => Package['nginx'],
 }
