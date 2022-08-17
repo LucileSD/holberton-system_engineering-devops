@@ -5,7 +5,7 @@ file_line { 'no password':
   line   => '    PasswordAuthentication no',
 }
 file_line { 'change private key':
-  ensure =>present,
+  ensure => present,
   path   => '/etc/.ssh/ssh_config',
   line   => '    IdentifyFile ~/.ssh/school'
 }
