@@ -7,5 +7,5 @@ file_line { 'no password':
 file_line { 'change private key':
   ensure => present,
   path   => '/etc/.ssh/ssh_config',
-  line   => '    IdentityfyFile ~/.ssh/school'
+  line   => '    IdentityFile ~/.ssh/school'
 }
