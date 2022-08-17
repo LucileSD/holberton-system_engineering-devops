@@ -1,4 +1,4 @@
-#Create Nginx configuratio server via puppet
+#Create Nginx configuration server via puppet
 
 file { 'html':
   path    => '/var/www/html/index.nginx-debian.html',
