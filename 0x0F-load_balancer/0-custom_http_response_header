@@ -1,5 +1,6 @@
 #!/bin/bash
 # configures a brand new Ubuntu machine
+# shellcheck disable=SC2154
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Hello World" > /var/www/html/index.nginx-debian.html 
