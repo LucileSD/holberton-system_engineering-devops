@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # install nginx
-apt-get -y update
-apt-get -y install nginx
-service nginx start
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
