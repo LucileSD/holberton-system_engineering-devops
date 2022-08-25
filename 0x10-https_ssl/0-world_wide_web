@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# display information about subdomains
+myecho() {
+	echo "The subdomain $1 is a $2 record and points to $3"
+}
+
+if [[ -z "$2" ]]
+then
+	subd=("www" "lb-01" "web-01" "web-02")
+	for subdomain in "${subd[@]}"; do
+		record=$(dig $subdomain.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $4}')
+		ip=$(dig $subdomain.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $5}')
+		myecho $subdomain $record $ip
+	done
+elif [[ -n "$2" ]]
+then
+	record=$(dig $2.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $4}' )
+	ip=$(dig $2.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $5}')
+	myecho $2 $record $ip
+fi
