@@ -7,8 +7,7 @@ global
         user haproxy
         group haproxy
         daemon
-        maxconn 2048
-        tune.ssl.default-dh-param 2048
+
 
         # Default SSL material locations
         ca-base /etc/ssl/certs
@@ -34,22 +33,14 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-        option forwardfor
-        option http-server-close
+
 frontend www-http
         bind *:80
-        reqadd X-forwarded-Proto:\ http
         default_backend web-backend
+        bind *:443 ssl crt /etc/ssl/www.lsdeleforge.tech/www.lsdeleforge.tech.pem
+        redirect scheme https code 301 if !{ ssl_fc }
+
 backend web-backend
         balance roundrobin
-        redirect scheme https if !{ ssl_fc }
         server 4316-web-01 52.204.236.97:80 check
         server 4316-web-02 54.242.115.107:80 check
-backend letsencrypt-backend
-        server letsencrypt 127.0.0.1:54321
-frontend www-https
-        bind *:443 ssl crt /etc/haproxy/certs/lsdeleforge.tech.pem
-        reqadd X-Forwarded-Proto:\ https
-        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-        use_backend letsencrypt-backend if letsencrypt-acl
-        default_backend www-backend
