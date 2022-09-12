@@ -31,4 +31,4 @@ if __name__ == "__main__":
                                                           totalNumberOfTasks))
 
     for Todo in listTodo:
-        print("\t{}".format(Todo))
+        print("\t {}".format(Todo))

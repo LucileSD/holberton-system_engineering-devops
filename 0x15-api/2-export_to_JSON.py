@@ -21,8 +21,8 @@ if __name__ == "__main__":
 
     for idx in jsonTask:
         userDict[employeeId].append({"task": idx['title'],
-                                    "completed": idx['completed'],
-                                    "username": employeeName})
+                                     "completed": idx['completed'],
+                                     "username": employeeName})
 
     file = open("{}.json".format(employeeId), 'w')
     json.dump(userDict, file)
