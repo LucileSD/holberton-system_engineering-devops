@@ -4,11 +4,12 @@ for the project HBNB, after implement the framework flask, it was impossible to 
 
 **Timeline**
 
--16/9 17:30 all is ok
--17/9 9:01 impossible to execute the program
--17/9 9:02 find a circular import, correction of it
--17/9 9:04 impossible to execute the program, the interpretor indicates an assertion error
--17/9 10:00 find the solution
+ - 16/9 17:30 all is ok
+ - 17/9 9:01 impossible to execute the program
+ - 17/9 9:02 find a circular import, correction of it
+ - 17/9 9:04 impossible to execute the program, the interpretor indicates an assertion error
+ - 17/9 10:00 find the solution
+
 
 **Root cause**
 
