@@ -17,4 +17,4 @@ for the project HBNB, after implement the framework flask, it was impossible to 
 
 **Corrective measures**
 
-choose the name of methods with a link with the name of the file and the goal of the method, with a lot of precision even if the name is long. it is permetting to avoid similar name.
+choose the name of methods with a link with the name of the file and the goal of the method, with a lot of precision even if the name is long. it is permetting to avoid similar name and so problem of execution. It is necessary to execute the program the next day after have finished it because some issues appear later.
