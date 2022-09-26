@@ -13,7 +13,7 @@ for the project HBNB, after implement the framework flask, it was impossible to 
 
 **Root cause**
 
-2 methods in 2 different files had the same name
+2 methods in 2 different files had the same name. the methods do the same hing but in two different classes.
 
 **Corrective measures**
 
